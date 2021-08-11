@@ -1,0 +1,10 @@
+.Header {
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+}

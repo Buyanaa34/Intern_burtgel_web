@@ -1,0 +1,10 @@
+.Login_container {
+  padding: 10px;
+  background-color: rgba(128, 139, 225, 0.5);
+  margin: 0 auto;
+  width: 25%;
+  height: 150px;
+  margin-top: 25px !important;
+  box-shadow: 5px 10px rgb(155, 155, 155);
+  border-radius: 5px;
+}

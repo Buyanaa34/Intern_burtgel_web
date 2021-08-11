@@ -1,0 +1,62 @@
+.Clndr {
+  background: rgb(245, 96, 96);
+  border-radius: 10px;
+  height: 67vh;
+  margin: 20px;
+  box-shadow: inset -1px 3px 8px 5px #f56060, 2px 5px 16px 0px #373737;
+}
+@media (max-width: 670px) {
+  .Clndr {
+    margin: 5px;
+  }
+}
+.Weekz {
+  background-color: #4e76f8;
+  margin: 10px;
+  height: 80px;
+  border-radius: 10px;
+}
+.Weekz span {
+  margin: 10px;
+  font-size: 20px;
+}
+.Dayz {
+  padding: 10px;
+  margin: 10px;
+  background-color: #4e76f8;
+  border-radius: 10px;
+  display: grid;
+  font-size: 15px !important;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.day_num {
+  font-size: 21px !important;
+  transition: 0.3s;
+}
+
+.day_num:hover {
+  background-color: #194cf5;
+  cursor: pointer;
+}
+
+@media (max-height: 597px) {
+  .Clndr {
+    height: 400px !important;
+  }
+}
+.status {
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.status,
+#Y {
+  background-color: #4caf50;
+}
+.status,
+#n {
+  background-color: #f44336;
+}
