@@ -1,9 +1,19 @@
-import { React, useState } from "react";
+import { React, useState, useEffect } from "react";
 import "./style.css";
 const Calendar_z = (props) => {
   // const months = ["JUN", "JUL", "AUG"];
   // const weeks = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
   const [which_week, set_Week] = useState(1);
+  const [daragdsan_udur, setdaragdsnudur] = useState("");
+  if (props.changed_choice !== "") {
+    // console.log(props.changed_choice);
+    try {
+      // console.log(daragdsan_udur + "day");
+      document
+        .getElementById(daragdsan_udur + "day")
+        .setAttribute("day_id", props.changed_choice);
+    } catch (e) {}
+  }
   const lol_array = [
     ["w1", "MAY-31", "JUN-1", "JUN-2", "JUN-3", "JUN-4"],
     ["w2", "JUN-7", "JUN-8", "JUN-9", "JUN-10", "JUN-11"],
@@ -19,8 +29,34 @@ const Calendar_z = (props) => {
     ["w12", "AUG-16", "AUG-17", "AUG-18", "AUG-19", "AUG-20"],
     ["w13", "AUG-23", "AUG-24", "AUG-25", "AUG-26", "AUG-27"],
   ];
+  const yesnostate_default = [
+    ["w1", "N", "N", "N", "N", "N"],
+    ["w2", "N", "N", "N", "N", "N"],
+    ["w3", "N", "N", "N", "N", "N"],
+    ["w4", "N", "N", "N", "N", "N"],
+    ["w5", "N", "N", "N", "N", "N"],
+    ["w6", "N", "N", "N", "N", "N"],
+    ["w7", "N", "N", "N", "N", "N"],
+    ["w8", "N", "N", "N", "N", "N"],
+    ["w9", "N", "N", "N", "N", "N"],
+    ["w10", "N", "N", "N", "N", "N"],
+    ["w11", "N", "N", "N", "N", "N"],
+    ["w12", "N", "N", "N", "N", "N"],
+    ["w13", "N", "N", "N", "N", "N"],
+  ];
+
+  useEffect(() => {
+    props.db_day.forEach((element) => {
+      try {
+        document
+          .getElementById(element[1].day + "day")
+          .setAttribute("day_id", element[1].yesno_state);
+      } catch (e) {}
+    });
+  });
 
   const daynumclick = (day) => {
+    setdaragdsnudur(day);
     //UDUR DEER DARAH UED
     const state_yes_no = document
       .getElementById(day + "day")
@@ -60,27 +96,45 @@ const Calendar_z = (props) => {
     return day_num_content;
   };
   //Red Green row-g haruulah heseg
-  const status_creation = () => {
-    const dummy_status = ["Y", "Y", "N", "Y", "N"];
-    let status_content = [];
+  // const status_creation = () => {
+  //   const dummy_status = ["Y", "Y", "N", "Y", "N"];
+  //   let status_content = [];
+  //   for (let i = 1; i < 6; i++) {
+  //     status_content.push(
+  //       <span
+  //         day_id={dummy_status[i - 1]}
+  //         key={lol_array[which_week - 1][i] + "day"}
+  //         className="status"
+  //         id={lol_array[which_week - 1][i] + "day"}
+  //       ></span>
+  //     );
+  //   }
+  //   return status_content;
+  // };
+  const dummy_yesno = () => {
+    let yesno_content = [];
     for (let i = 1; i < 6; i++) {
-      status_content.push(
+      yesno_content.push(
         <span
-          day_id={dummy_status[i - 1]}
+          day_id={yesnostate_default[which_week - 1][i]}
           key={lol_array[which_week - 1][i] + "day"}
           className="status"
           id={lol_array[which_week - 1][i] + "day"}
         ></span>
       );
     }
-    return status_content;
+    return yesno_content;
   };
   //Monday to Sunday haruulah heseg
   const mon_to_sun_creation = () => {
     const weekz = ["MON", "TUE", "WED", "THU", "FRI"];
     let mon_to_sun_content = [];
     for (let i = 0; i < 5; i++) {
-      mon_to_sun_content.push(<span className="day_name">{weekz[i]}</span>);
+      mon_to_sun_content.push(
+        <span key={i} className="day_name">
+          {weekz[i]}
+        </span>
+      );
     }
     return mon_to_sun_content;
   };
@@ -88,13 +142,13 @@ const Calendar_z = (props) => {
     <div className="Clndr">
       <span style={{ fontSize: "30px" }}>CALENDAR</span>
       <div className="Weekz">
-        <button className="towch" onClick={() => btnclick("prev")}>
+        <button className="btn" id="prev" onClick={() => btnclick("prev")}>
           PREV
         </button>
         <span id="month_and_week" style={{ fontSize: "15px" }}>
           WEEK:{which_week}
         </span>
-        <button className="towch" onClick={() => btnclick("next")}>
+        <button className="btn" id="nxt" onClick={() => btnclick("next")}>
           NEXT
         </button>
       </div>
@@ -104,7 +158,7 @@ const Calendar_z = (props) => {
         {/* ************************************************************DAYS************************************************************ */}
         {day_num_creation()}
         {/* ************************************************************STATUS************************************************************ */}
-        {status_creation()}
+        {dummy_yesno()}
       </div>
       <div></div>
     </div>

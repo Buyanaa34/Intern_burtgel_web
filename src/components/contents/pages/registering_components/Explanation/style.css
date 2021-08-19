@@ -3,6 +3,8 @@
   border-radius: 10px;
   height: 67vh;
   margin: 20px;
+  width: 38vw;
+  overflow: hidden;
   box-shadow: inset -1px 3px 8px 5px #f56060, 2px 5px 16px 0px #373737;
 }
 @media (max-width: 670px) {

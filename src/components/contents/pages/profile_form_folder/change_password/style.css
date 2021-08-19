@@ -1,0 +1,45 @@
+.password_container {
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  color: #f76464;
+  position: absolute;
+  height: 250px;
+  width: 350px;
+  top: 30%;
+  left: 40%;
+  z-index: 10;
+  animation-name: zoom_in;
+  animation-duration: 1s;
+}
+@keyframes zoom_in {
+  from {
+    height: 10px;
+    width: 30px;
+  }
+  to {
+    height: 250x;
+    width: 350px;
+  }
+}
+.all_contents {
+  animation-name: hide_show;
+  animation-delay: 1s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+@keyframes hide_show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.btn#Submit {
+  background-color: #4caf50;
+}
+.btn#Cancel {
+  background-color: #f44336;
+}

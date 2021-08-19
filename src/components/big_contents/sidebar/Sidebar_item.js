@@ -1,6 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { withRouter } from "react-router";
 const Sidebar_item = (props) => {
+  const loggedout = () => {
+    if (window.confirm("Are you sure you want to Logout ?")) {
+      localStorage.removeItem("user_info");
+      localStorage.removeItem("token");
+      props.isloggedin();
+      props.history.push({
+        pathname: "/login",
+      });
+    }
+  };
   let return_value = "buuuz";
   if (props.txt === "Home") {
     return_value = (
@@ -29,9 +40,16 @@ const Sidebar_item = (props) => {
         </div>
       </Link>
     );
+  } else if (props.txt === "Logout") {
+    return_value = (
+      <div className="Sidebar_item" onClick={loggedout}>
+        <img src="/log-out.png" alt="user"></img>
+        <span>{props.txt}</span>
+      </div>
+    );
   } else {
     return_value = (
-      <Link className="link" to="/">
+      <Link className="link" to="/login">
         <div className="Sidebar_item">
           <img src="/log-out.png" alt="user"></img>
           <span>{props.txt}</span>
@@ -42,4 +60,4 @@ const Sidebar_item = (props) => {
   return return_value;
 };
 
-export default Sidebar_item;
+export default withRouter(Sidebar_item);

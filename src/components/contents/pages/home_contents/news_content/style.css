@@ -1,0 +1,31 @@
+.news_content {
+  background-color: #f56060;
+  margin: 5px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 15px 5px rgba(0, 0, 0, 0.32);
+}
+.txt_of_news {
+  text-align: justify;
+  font-size: 17px;
+  padding: 10px;
+}
+.news_content span {
+  font-size: 30px;
+}
+.txt_of_news_holder {
+  margin: 20px;
+  border-radius: 10px;
+  color: gray;
+  box-shadow: 2px 2px 15px 5px rgba(0, 0, 0, 0.32);
+  background-color: white;
+  animation-name: txt_animation;
+  animation-duration: 1.3s;
+}
+@keyframes txt_animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

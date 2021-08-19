@@ -14,6 +14,7 @@
   background-color: #4e76f8;
   margin: 10px;
   height: 80px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.227);
   border-radius: 10px;
 }
 .Weekz span {
@@ -21,10 +22,10 @@
   font-size: 20px;
 }
 .Dayz {
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.227);
   padding: 10px;
   margin: 10px;
   background-color: #4e76f8;
-
   border-radius: 10px;
   display: grid;
   font-size: 15px !important;
@@ -32,8 +33,13 @@
 }
 
 .day_num {
-  font-size: 17px !important;
+  margin-top: 10px;
+  font-size: 20px !important;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
   transition: 0.3s;
+  box-shadow: 1px 0px 10px 5px rgba(0, 0, 0, 0.2);
 }
 
 .day_num:hover {
@@ -70,4 +76,16 @@ span[day_id="Y"] {
 }
 span[day_id="N"] {
   background-color: #f44336;
+}
+
+.btn#nxt,
+.btn#prev {
+  font-size: 13px !important;
+  padding: 10px;
+  background-color: #4caf50;
+}
+
+.btn#nxt:hover,
+.btn#prev:hover {
+  background-color: #377c39;
 }

@@ -1,10 +1,93 @@
 .Login_container {
   padding: 10px;
-  background-color: rgba(128, 139, 225, 0.5);
-  margin: 0 auto;
-  width: 25%;
+  background-color: #ffffff;
+  margin: auto;
+  margin-top: 20px;
+  width: 350px !important;
   height: 150px;
-  margin-top: 25px !important;
-  box-shadow: 5px 10px rgb(155, 155, 155);
-  border-radius: 5px;
+  box-shadow: 0px 1px 15px 5px rgba(0, 0, 0, 0.64);
+  border-radius: 10px;
+}
+
+.Login {
+  background-color: #f56060;
+  box-shadow: 0px 1px 15px 5px rgba(0, 0, 0, 0.64);
+  border-radius: 10px;
+  padding: 50px;
+  margin: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.question {
+  color: #f56060;
+  font-weight: bold;
+  font-size: 26px;
+  margin-bottom: 25px;
+}
+.to_signup {
+  padding: 30px;
+  margin: auto;
+  margin-top: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 1px 15px 5px rgba(0, 0, 0, 0.64);
+}
+.to_signup button {
+  margin-left: 20px;
+  background-color: #4caf50;
+}
+
+.to_signup button:hover {
+  background-color: #377c39;
+}
+
+.title {
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+  animation-name: title_animation;
+  animation-duration: 1.7s;
+}
+.btn#login {
+  background-color: #008cba;
+}
+.btn#login:hover {
+  background-color: #026587;
+}
+
+@keyframes title_animation {
+  from {
+    opacity: 0;
+    margin-left: 25%;
+  }
+  to {
+    opacity: 1;
+    margin-left: 0;
+  }
+}
+
+.login_holder,
+.SignUp {
+  animation-name: content_animation;
+  animation-duration: 1s;
+}
+
+@keyframes content_animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.container {
+  padding: 10px;
+  margin: 40px 60px 60px 60px;
+  padding-top: 0 !important;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 1px 18px 0px rgb(0 0 0 / 52%);
 }

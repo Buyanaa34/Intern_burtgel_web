@@ -1,4 +1,28 @@
 .form {
-  margin: 5px;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #747474;
+  border-style: none;
   width: 70%;
+  font-weight: 100;
+  font-size: 17px;
+  height: 25px;
+  border-radius: 5px;
+  border-bottom: solid 2px #f56060;
+}
+.form::-webkit-outer-spin-button,
+.form::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.form::placeholder {
+  color: #c2c1c1;
+}
+
+.form:focus {
+  outline: none;
+  border-bottom: solid 2px #7393fa;
 }
