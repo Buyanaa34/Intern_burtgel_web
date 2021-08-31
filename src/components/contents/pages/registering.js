@@ -18,7 +18,6 @@ const Registering = (props) => {
   const [huudas_dahin_unshih, set_huudas_unshih] = useState(false); //tuhain huudas/component-g refresh hiih eseh ?
   useEffect(() => {
     setloading(true);
-    // props.user_info[4][1]
     axios
       .get(
         "udriin_burtgel.json?&auth=" +

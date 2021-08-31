@@ -1,0 +1,63 @@
+.attendance {
+  background-color: #f56060;
+  border-radius: 10px;
+  margin: 10px;
+  box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.42);
+}
+.main_content {
+  margin: 10px;
+  background-color: #7393fa;
+  border-radius: 10px;
+  box-shadow: 0px 0px 16px 5px rgba(0, 0, 0, 0.179);
+}
+.month_show {
+  padding: 10px;
+  font-size: 20px;
+  display: grid;
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+.month_show span {
+  border-radius: 5px;
+}
+.month_show span:hover {
+  cursor: pointer;
+  background-color: #ffffffab;
+}
+#yesno.Y {
+  background-color: #4caf50;
+  border-radius: 10px;
+  margin: 5px;
+}
+#yesno.N {
+  background-color: #c04d4d;
+  border-radius: 10px;
+  margin: 5px;
+}
+.note_shower {
+  font-size: 15px;
+  text-align: left;
+  padding: 5px;
+  background-color: white;
+  border-radius: 10px;
+  color: gray;
+  margin: 5px;
+}
+.show_content {
+  display: grid;
+  margin: 5px;
+  grid-template-columns: 1fr 5fr;
+}
+.unknown {
+  color: white;
+  background-color: #a0a0a0;
+}
+.N {
+  color: white;
+  background-color: #bf3e3e;
+}
+.Y {
+  color: white;
+  background-color: #4caf50;
+}

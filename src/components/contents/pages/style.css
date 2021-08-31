@@ -47,3 +47,32 @@
     margin-left: 0;
   }
 }
+.btn#submit {
+  background-color: #4caf50;
+}
+.btn#submit:hover {
+  background-color: #3a873c;
+}
+.btn#cancel {
+  background-color: #008cba;
+}
+.btn#cancel:hover {
+  background-color: #006a8d;
+}
+
+.news_add_holder {
+  box-shadow: 0px 0px 24px 4px rgba(0, 0, 0, 0.49);
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 20px;
+  background-color: #f56060;
+  height: 350px;
+  width: 660px;
+}
+.ih_bie {
+  outline: none;
+  font-size: 13px;
+  border-radius: 10px;
+  height: 170px;
+  width: 450px;
+}

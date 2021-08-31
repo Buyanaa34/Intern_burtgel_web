@@ -6,6 +6,9 @@ const Sidebar_item = (props) => {
     if (window.confirm("Are you sure you want to Logout ?")) {
       localStorage.removeItem("user_info");
       localStorage.removeItem("token");
+      localStorage.removeItem("isadmin");
+      localStorage.removeItem("expireDate");
+      localStorage.removeItem("all_items_id");
       props.isloggedin();
       props.history.push({
         pathname: "/login",
@@ -36,6 +39,15 @@ const Sidebar_item = (props) => {
       <Link className="link" to="/registering">
         <div className="Sidebar_item">
           <img src="/edit.png" alt="user"></img>
+          <span>{props.txt}</span>
+        </div>
+      </Link>
+    );
+  } else if (props.txt === "Observation") {
+    return_value = (
+      <Link className="link" to="/observation">
+        <div className="Sidebar_item">
+          <img src="/observation.png" alt="user"></img>
           <span>{props.txt}</span>
         </div>
       </Link>

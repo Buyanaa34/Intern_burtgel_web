@@ -29,13 +29,6 @@ const SignUp = (props) => {
         alert("Password does not match with Confirmation password");
         setloading(false);
       } else {
-        //Password unique esehiig shalgan && Username unique esehiig shalgan && Gmail unique esehig shalgan
-        // const bcrypt = require("bcryptjs");
-        // const hashed_password = bcrypt.hashSync(
-        //   document.getElementById("Password").value,
-        //   bcrypt.genSaltSync()
-        // );
-
         const user_info = {
           displayName: document.getElementById("Firstname").value,
           email: document.getElementById("Gmail").value,
@@ -53,14 +46,10 @@ const SignUp = (props) => {
               pathname: "/login",
             });
             setloading(false);
-            document.getElementById("Firstname").value = "";
-            document.getElementById("Gmail").value = "";
-            document.getElementById("Password").value = "";
-            document.getElementById("Password_2nd_time").value = "";
           })
           .catch((e) => {
+            console.log(e);
             setloading(false);
-            alert(e.response.data.error.errors[0].message);
           });
       }
     }

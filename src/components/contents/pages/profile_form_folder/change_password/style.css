@@ -1,13 +1,14 @@
 .password_container {
   background-color: rgb(255, 255, 255);
+  box-shadow: 1px 2px 15px 5px rgba(0, 0, 0, 0.75);
   border-radius: 10px;
   color: #f76464;
-  position: absolute;
+  margin-top: 50px !important;
+  padding: 20px;
+  padding-bottom: 0 !important;
+  margin: auto;
   height: 250px;
   width: 350px;
-  top: 30%;
-  left: 40%;
-  z-index: 10;
   animation-name: zoom_in;
   animation-duration: 1s;
 }
@@ -42,4 +43,12 @@
 }
 .btn#Cancel {
   background-color: #f44336;
+}
+.btn_holder {
+  margin-top: 20px;
+}
+#headers {
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
 }

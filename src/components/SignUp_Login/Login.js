@@ -1,8 +1,8 @@
-import { React, useState } from "react";
+import { React } from "react";
 import Form from "../contents/form/Form";
 import { withRouter } from "react-router";
 import "./style.css";
-import Spinner from "../contents/spinner/Spinner";
+import { Link } from "react-router-dom";
 const Login = (props) => {
   const onclk = () => {
     props.history.push({
@@ -97,6 +97,9 @@ const Login = (props) => {
           </button>
         </div>
       </div>
+      <Link className="forgot_it" to={"/forgot"}>
+        <span>Forgot password ?</span>
+      </Link>
     </div>
   );
 };

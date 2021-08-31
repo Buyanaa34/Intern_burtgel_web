@@ -15,6 +15,7 @@ const Calendar_z = (props) => {
     } catch (e) {}
   }
   const lol_array = [
+    ["w0", "MAY-24", "MAY-25", "MAY-26", "MAY-27", "MAY-28"],
     ["w1", "MAY-31", "JUN-1", "JUN-2", "JUN-3", "JUN-4"],
     ["w2", "JUN-7", "JUN-8", "JUN-9", "JUN-10", "JUN-11"],
     ["w3", "JUN-14", "JUN-15", "JUN-16", "JUN-17", "JUN-18"],
@@ -28,8 +29,10 @@ const Calendar_z = (props) => {
     ["w11", "AUG-9", "AUG-10", "AUG-11", "AUG-12", "AUG-13"],
     ["w12", "AUG-16", "AUG-17", "AUG-18", "AUG-19", "AUG-20"],
     ["w13", "AUG-23", "AUG-24", "AUG-25", "AUG-26", "AUG-27"],
+    ["w14", "AUG-30", "AUG-31", "SEP-1", "SEP-2", "SEP-3"],
   ];
   const yesnostate_default = [
+    ["w0", "N", "N", "N", "N", "N"],
     ["w1", "N", "N", "N", "N", "N"],
     ["w2", "N", "N", "N", "N", "N"],
     ["w3", "N", "N", "N", "N", "N"],
@@ -43,6 +46,7 @@ const Calendar_z = (props) => {
     ["w11", "N", "N", "N", "N", "N"],
     ["w12", "N", "N", "N", "N", "N"],
     ["w13", "N", "N", "N", "N", "N"],
+    ["w14", "N", "N", "N", "N", "N"],
   ];
 
   useEffect(() => {
@@ -72,7 +76,7 @@ const Calendar_z = (props) => {
         set_Week(dummy);
       }
     } else {
-      if (which_week !== 13) {
+      if (which_week !== 15) {
         const dummy = which_week + 1;
         set_Week(dummy);
       }

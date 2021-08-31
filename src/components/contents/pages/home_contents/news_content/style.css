@@ -5,6 +5,8 @@
   box-shadow: 2px 2px 15px 5px rgba(0, 0, 0, 0.32);
 }
 .txt_of_news {
+  white-space: pre-wrap;
+
   text-align: justify;
   font-size: 17px;
   padding: 10px;
@@ -28,4 +30,16 @@
   to {
     opacity: 1;
   }
+}
+.btn#add {
+  background-color: #4caf50;
+}
+.btn#add:hover {
+  background-color: #3c8a3f;
+}
+.btn#delete {
+  background-color: #f44336;
+}
+.btn#delete:hover {
+  background-color: #c2352a;
 }
