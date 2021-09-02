@@ -67,6 +67,7 @@
 .status#N {
   background-color: #f44336;
 }
+
 .day_name {
   text-decoration: underline;
 }
@@ -76,6 +77,9 @@ span[day_id="Y"] {
 }
 span[day_id="N"] {
   background-color: #f44336;
+}
+span[day_id="unknown"] {
+  background-color: #979797;
 }
 
 .btn#nxt,
